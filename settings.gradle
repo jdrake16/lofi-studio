@@ -1,0 +1,2 @@
+rootProject.name='lofi Studio'
+include ':app'
