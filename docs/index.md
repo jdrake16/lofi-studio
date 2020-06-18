@@ -6,16 +6,16 @@ _lofi Studio_ 1.0 is an intuitive beat-maker for those who enjoy the calming sou
 
 ## Design Documentation
 
-## [User Stories](user-stories.md) 
+### [User Stories](user-stories.md) 
 
-## [Functionality](Functionality.md) 
+### [Functionality](Functionality.md) 
 
-## [Persistent Data](persistent-data.md) 
+### [Persistent Data](persistent-data.md) 
 
-## [Device/external services](device-external-services.md) 
+### [Device/external services](device-external-services.md) 
  
-## [Stretch goals/possible enhancements](stretch-goals.md) 
+### [Stretch goals/possible enhancements](stretch-goals.md) 
 
-## [Wireframe diagram](wireframe.md)
+### [Wireframe diagram](wireframe.md)
 
 
