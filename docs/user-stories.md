@@ -7,7 +7,7 @@
 
 * Relaxation seekers who want better control of the music they listen to when relaxing.
 
-	> As an avid wino, I need a way to create mixes that I can blackout to whilst enjoying some decently priced cab from Trader Joes in the tub.
+	> As an avid wino, I need a way to create playlists that I can blackout to whilst enjoying some decently priced cab from Trader Joes in the tub.
 
 * Aspiring producers or kids that want to learn the basics of beat making.
 

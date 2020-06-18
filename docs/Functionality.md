@@ -4,4 +4,3 @@
 
 * Create playlists of custom beats for all you lofi needs.
 
-* Create mixes that seamlessly weave your beats together based on tempo and key.
