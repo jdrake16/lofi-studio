@@ -16,4 +16,6 @@ _lofi Studio_ 1.0 is an intuitive beat-maker for those who enjoy the calming sou
  
 ## [Stretch goals/possible enhancements](stretch-goals.md) 
 
-* [Wireframe diagram](wireframe.md)
+## [Wireframe diagram](wireframe.md)
+
+
