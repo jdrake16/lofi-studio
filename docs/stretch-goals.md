@@ -1,6 +1,6 @@
 ## Stretch goals/possible enhancements 
 
-* Create mixes that seamlessly weave your beats together based on tempo and key.
+* Custom Mix creator that seamlessly weaves your beats together based on tempo and key.
 
 * Step-sequencer for better control of beats.
 

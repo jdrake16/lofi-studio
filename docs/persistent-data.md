@@ -2,6 +2,5 @@
 
 * Individual beats 
 
-* Playlists
+* Custom playlists
 
-* Custom mixes
