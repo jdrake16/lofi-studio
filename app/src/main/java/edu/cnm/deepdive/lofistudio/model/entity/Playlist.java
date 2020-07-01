@@ -9,8 +9,8 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(
-    indices = @Index(value = "name", unique = true))
-
+    indices = @Index(value = "name", unique = true)
+)
 public class Playlist {
 
   @PrimaryKey(autoGenerate = true)
