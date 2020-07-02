@@ -1,6 +1,7 @@
 package edu.cnm.deepdive.lofistudio.model.entity;
 
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
@@ -15,8 +16,10 @@ public class Sample {
   @ColumnInfo(name = "sample_id")
   private long id;
 
+  @NonNull
   private String name;
 
+  @NonNull
   private String content;
 
   private int length;
