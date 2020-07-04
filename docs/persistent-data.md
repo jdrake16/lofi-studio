@@ -1,6 +1,8 @@
 ## Persistent data
 
-* Individual beats 
+* Individual beats created by the user.
 
-* Custom playlists
+* Custom playlists made up of user-made beats.
+
+* A sample library of Quality lofi sounds.
 
