@@ -9,6 +9,16 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
+    <activity android:name=".controller.SongSampleFragment">
+    </activity>
+    <activity android:name=".controller.SongPlaylistFragment">
+    </activity>
+    <activity android:name=".controller.SongFragment">
+    </activity>
+    <activity android:name=".controller.SampleFragment">
+    </activity>
+    <activity android:name=".controller.PlaylistFragment">
+    </activity>
     <activity android:name=".controller.MainActivity">
     </activity>
   </application>
