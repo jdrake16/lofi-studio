@@ -5,6 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 import edu.cnm.deepdive.lofistudio.model.entity.Song;
 import edu.cnm.deepdive.lofistudio.model.entity.SongPlaylist;
@@ -31,6 +32,7 @@ public interface SongSampleDao {
   @Delete
   Single<Integer> delete(SongSample... songSamples);
 
+  @Transaction
   @Query("SELECT * FROM SongSample ORDER BY song_sample_id")
   Single<List<Song>> selectAll();
 
