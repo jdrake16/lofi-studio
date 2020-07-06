@@ -7,5 +7,5 @@
 
 * Aspiring producers or kids that want to learn the basics of beat making.
 
-	> I want to be the next Dj Khaled, but I don't know the first thing about making beats! I need an easy-to-use program that will teach me the basics of song structure.
+	> I want to be a producer someday, but I don't know the first thing about making beats! I need an easy-to-use program that will teach me the basics of song structure.
 	
