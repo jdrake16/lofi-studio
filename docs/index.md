@@ -19,3 +19,5 @@ _lofi Studio_ 1.0 is an intuitive beat-maker for those who enjoy the calming sou
 ### [Wireframe diagram](wireframe.md)
 
 ### [ERD](erd.md)
+
+### [Entity Classes](Playlist.java)
