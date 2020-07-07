@@ -64,9 +64,9 @@ public abstract class LofiStudioDatabase extends RoomDatabase {
     public void onCreate(@NonNull SupportSQLiteDatabase db) {
       super.onCreate(db);
       try {
-        // TODO read sample list from raw resource; save mp3 resources to files?
+        // TODO read sample LIST from raw resource; (find way to) save mp3 resources to files?
         // TODO add sample instances to database
-        Map<Sample, List<Sample>> map = parseFile(R.raw.drum_loop_restored_retro);
+        Map<Sample, List<Sample>> map = parseFile(R.raw.lofi_samples_twenty);
         persist(map);
       } catch (IOException e) {
         throw new RuntimeException(e);
@@ -75,8 +75,6 @@ public abstract class LofiStudioDatabase extends RoomDatabase {
 
     private Map<Sample, List<Sample>> parseFile(int resourceId) throws IOException {
       try (InputStream input = LofiStudioDatabase.context.getResources().openRawResource(resourceId);
-
-
       ) {
 
   }
