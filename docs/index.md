@@ -29,3 +29,7 @@ _lofi Studio_ 1.0 is an intuitive beat-maker for those who enjoy the calming sou
 ## Service
 
 ### [Database/Repositories](https://github.com/jdrake16/lofi-studio/tree/master/app/src/main/java/edu/cnm/deepdive/lofistudio/service)
+
+## DDL
+
+### [Data Definition Language](ddl.md)
