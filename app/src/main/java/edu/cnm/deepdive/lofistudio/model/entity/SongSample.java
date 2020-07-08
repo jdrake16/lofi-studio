@@ -14,8 +14,8 @@ import androidx.room.PrimaryKey;
     foreignKeys = {
         @ForeignKey(entity = Song.class,
             parentColumns = "song_id", childColumns = "song_id", onDelete = ForeignKey.CASCADE),
-        @ForeignKey(entity = Playlist.class,
-            parentColumns = "sample_id", childColumns = "song_id", onDelete = ForeignKey.CASCADE)
+        @ForeignKey(entity = Sample.class,
+            parentColumns = "sample_id", childColumns = "sample_id", onDelete = ForeignKey.CASCADE)
     }
 )
 public class SongSample {

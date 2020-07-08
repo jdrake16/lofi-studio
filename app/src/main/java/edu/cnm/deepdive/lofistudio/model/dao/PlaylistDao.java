@@ -33,8 +33,8 @@ public interface PlaylistDao {
   Single<Integer> delete(Playlist... playlists);
 
   @Transaction
-  @Query("SELECT * FROM Sample ORDER BY name")
-  Single<List<Song>> selectAll();
+  @Query("SELECT * FROM Playlist ORDER BY name")
+  Single<List<Playlist>> selectAll();
 
 
 
