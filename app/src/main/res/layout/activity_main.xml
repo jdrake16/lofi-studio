@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".MainActivity"
+  android:id="@+id/layout"
+
+  android:background="@drawable/gradient_list"
+  android:orientation="vertical"
+  android:gravity="center"
+  tools:context=".controller.MainActivity"
   >
 
 
-  <TextView
-    android:id="@+id/options"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text=""
 
-    android:layout_marginTop="25dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
 
   <Button
     android:id="@+id/butt1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Create"
-    android:background="@drawable/butt_background1"
-    app:layout_constraintTop_toBottomOf="@+id/options"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"/>
+    android:background="@android:color/transparent"
+    android:textSize="50sp"
+    android:padding="40dp"
+
+
+    />
 
   <Button
     android:id="@+id/butt2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Listen"
-    android:background="@drawable/butt_background1"
-    app:layout_constraintTop_toBottomOf="@+id/butt1"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"/>
+    android:textSize="50sp"
+    android:padding="40dp"
+    android:background="@android:color/transparent"
+
+    />
 
   <Button
     android:id="@+id/butt3"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Mix"
-    android:background="@drawable/butt_background1"
-    app:layout_constraintTop_toBottomOf="@+id/butt2"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"/>
+    android:textSize="50sp"
+    android:padding="40dp"
+    android:background="@android:color/transparent"
+
+    />
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

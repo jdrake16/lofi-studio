@@ -1,11 +1,14 @@
 package edu.cnm.deepdive.lofistudio.controller;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import edu.cnm.deepdive.lofistudio.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +17,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        LinearLayout linearLayout = findViewById(R.id.layout);
+        AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
 
         Button butt1 = findViewById(R.id.butt1);
         Button butt2 = findViewById(R.id.butt2);
