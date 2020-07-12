@@ -30,8 +30,10 @@ public class SongSample {
   @ColumnInfo(name = "sample_id", index = true)
   private long sampleId;
 
+  @ColumnInfo(name = "sequence")
   private int sequence;
 
+  @ColumnInfo(name = "repetitions")
   private int repetitions;
 
   public long getId() {

@@ -31,6 +31,7 @@ public class SongPlaylist {
   @ColumnInfo(name = "playlist_id", index = true) // "index = true" for foreign keys
   private long playlistId;
 
+  @ColumnInfo(name = "sequence")
   private int sequence;
 
   public long getId() {

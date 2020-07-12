@@ -34,6 +34,6 @@ public interface SongPlaylistDao {
 
   @Transaction
   @Query("SELECT * FROM SongPlaylist ORDER BY song_playlist_id")
-  Single<List<Song>> selectAll();
+  Single<List<SongPlaylist>> selectAll();
 
 }
