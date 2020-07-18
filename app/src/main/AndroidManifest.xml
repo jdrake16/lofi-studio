@@ -14,7 +14,10 @@
     </activity>
     <activity android:name=".controller.Activity2">
     </activity>
-    <activity android:name=".controller.Activity1">
+    <activity
+      android:name=".controller.Activity1"
+      android:screenOrientation="fullSensor"
+      >
     </activity>
     <activity android:name=".controller.MainActivity">
       <intent-filter>
