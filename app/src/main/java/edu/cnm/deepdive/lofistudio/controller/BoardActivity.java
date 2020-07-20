@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Display;
+import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
@@ -21,15 +22,14 @@ import edu.cnm.deepdive.lofistudio.R;
 import edu.cnm.deepdive.lofistudio.SamplerToggleListener;
 import edu.cnm.deepdive.lofistudio.sequencer.Sequencer;
 
-public class Activity1 extends AppCompatActivity {
+public class BoardActivity extends AppCompatActivity {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_1);
-  }
 
-  public class BoardActivity extends Activity {
+
+    @Override
+    public void setContentView(View view) {
+      super.setContentView(R.layout.board);
+    }
 
     public static final int TOTAL_BEATS = 8;
 
@@ -47,7 +47,9 @@ public class Activity1 extends AppCompatActivity {
 
     LinearLayout boardLayouts[] = new LinearLayout[TOTAL_SAMPLES];
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
@@ -112,44 +114,44 @@ public class Activity1 extends AppCompatActivity {
 //        return false;
 //    }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-      super.onActivityResult(requestCode, resultCode, data);
-
-      switch (requestCode) {
-        case 0:
-          if (resultCode == Activity.RESULT_OK) {
-            String path = data.getStringExtra("path");
-            Log.i("ANDROIDEXPLORER", "path: " + path);
-            // reset the latest sample
-            sequencer.setSample(3, path);
-            // TODO it should actually add a new sample rather than
-            // overwriting an existing one
-            // TODO rethink the ui so it allows addition/removing
-            // samples on
-            // runtime
-          } else if (resultCode == RESULT_CANCELED) {
-            // User didn't select a file. Nothing to do here.
-          }
-          break;
-        case 1:
-          if (resultCode == 1) {
-            // Coming from preferences
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            String newBpm = prefs.getString("bpm", "75");
-            Log.e("TEST", "new bpm is " + Integer.parseInt(newBpm));
-            sequencer.setBpm(Integer.parseInt(newBpm));
-          }
-          break;
-        case 2:
-          Bundle b = data.getExtras();
-          int amount = b.getInt("amount");
-          Log.e("TEST", "Adding " + amount + " columns");
-          break;
-        default:
-          break;
-      }
-    }
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//      super.onActivityResult(requestCode, resultCode, data);
+//
+//      switch (requestCode) {
+//        case 0:
+//          if (resultCode == Activity.RESULT_OK) {
+//            String path = data.getStringExtra("path");
+//            Log.i("ANDROIDEXPLORER", "path: " + path);
+//            // reset the latest sample
+//            sequencer.setSample(3, path);
+//            // TODO it should actually add a new sample rather than
+//            // overwriting an existing one
+//            // TODO rethink the ui so it allows addition/removing
+//            // samples on
+//            // runtime
+//          } else if (resultCode == RESULT_CANCELED) {
+//            // User didn't select a file. Nothing to do here.
+//          }
+//          break;
+//        case 1:
+//          if (resultCode == 1) {
+//            // Coming from preferences
+//            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+//            String newBpm = prefs.getString("bpm", "75");
+//            Log.e("TEST", "new bpm is " + Integer.parseInt(newBpm));
+//            sequencer.setBpm(Integer.parseInt(newBpm));
+//          }
+//          break;
+//        case 2:
+//          Bundle b = data.getExtras();
+//          int amount = b.getInt("amount");
+//          Log.e("TEST", "Adding " + amount + " columns");
+//          break;
+//        default:
+//          break;
+//      }
+//    }
 
     private void prepareBoard() {
       createLayouts();
@@ -205,11 +207,6 @@ public class Activity1 extends AppCompatActivity {
       }
     }
   }
-
-
-
-}
-
 
 
 

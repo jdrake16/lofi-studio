@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import edu.cnm.deepdive.lofistudio.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         butt1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent int1 = new Intent(MainActivity.this,Activity1.class);
+                Intent int1 = new Intent(MainActivity.this, BoardActivity.class);
                 startActivity(int1);
             }
         });
