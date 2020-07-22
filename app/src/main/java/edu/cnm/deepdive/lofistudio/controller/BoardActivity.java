@@ -29,6 +29,8 @@ public class BoardActivity extends AppCompatActivity {
     @Override
     public void setContentView(View view) {
       super.setContentView(R.layout.board);
+
+      // TODO put BoardActivity in here.
     }
 
     public static final int TOTAL_BEATS = 8;
