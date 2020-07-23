@@ -1,20 +1,32 @@
 package edu.cnm.deepdive.lofistudio.controller;
 
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import edu.cnm.deepdive.lofistudio.R;
 
 public class TracksActivity extends AppCompatActivity {
 
   private boolean playing = false;
 
+//  ListView listView;
+//
+//  public TracksActivity() {
+//    ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<>(this, R.raw.lofi_samples_twenty);
+//    listView = findViewById(R.id.samples);
+//  }
+
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_tracks);
+
+
   }
 
   @Override
@@ -51,6 +63,8 @@ public class TracksActivity extends AppCompatActivity {
     }
     return handled;
   }
+
+
 
 
 }
