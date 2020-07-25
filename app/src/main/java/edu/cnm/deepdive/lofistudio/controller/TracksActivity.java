@@ -16,7 +16,7 @@ public class TracksActivity extends AppCompatActivity {
 //  ListView listView;
 //
 //  public TracksActivity() {
-//    ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<>(this, R.raw.lofi_samples_twenty);
+//    ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<>(toString(), android.R.layout.simple_list_item_1, );
 //    listView = findViewById(R.id.samples);
 //  }
 

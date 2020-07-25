@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 @Entity(
     indices = {
         @Index(value = {"song_id", "sequence"}),
-        @Index(value = {"sample_id", "sequence", "repetitions"})
+        @Index(value = {"sample_id", "sequence", "repetitions", "overlap"})
     },
     foreignKeys = {
         @ForeignKey(entity = Song.class,
@@ -35,6 +35,9 @@ public class SongSample {
 
   @ColumnInfo(name = "repetitions")
   private int repetitions;
+
+  @ColumnInfo(name = "overlap")
+  private int overlap;
 
   public long getId() {
     return id;
@@ -74,5 +77,13 @@ public class SongSample {
 
   public void setRepetitions(int repetitions) {
     this.repetitions = repetitions;
+  }
+
+  public int getOverlap() {
+    return overlap;
+  }
+
+  public void setOverlap(int overlap) {
+    this.overlap = overlap;
   }
 }
