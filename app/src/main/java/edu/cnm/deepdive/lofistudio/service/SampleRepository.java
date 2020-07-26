@@ -8,6 +8,7 @@ import edu.cnm.deepdive.lofistudio.model.dao.SongDao;
 import edu.cnm.deepdive.lofistudio.model.dao.SongPlaylistDao;
 import edu.cnm.deepdive.lofistudio.model.dao.SongSampleDao;
 import edu.cnm.deepdive.lofistudio.model.entity.Sample;
+import edu.cnm.deepdive.lofistudio.model.entity.Song;
 import edu.cnm.deepdive.lofistudio.model.entity.SongSample;
 import io.reactivex.Completable;
 import io.reactivex.Single;
@@ -34,6 +35,15 @@ public class SampleRepository {
     playlistDao = database.getPlaylistDao();
     songPlaylistDao = database.getSongPlaylistDao();
     songSampleDao = database.getSongSampleDao();
+
+  }
+
+  public Single<List<Sample>> selectAll() {
+    return sampleDao.selectAll();
+  }
+
+  public LiveData<List<Sample>> getAll() {
+    return sampleDao.getAll();
 
   }
 

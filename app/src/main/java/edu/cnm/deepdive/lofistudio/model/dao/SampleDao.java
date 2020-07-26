@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.lofistudio.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -31,8 +32,8 @@ public interface SampleDao {
   @Delete
   Single<Integer> delete(Sample... samples);
 
-  @Transaction
   @Query("SELECT * FROM Sample ORDER BY name")
   Single<List<Sample>> selectAll();
 
+  LiveData<List<Sample>> getAll();
 }

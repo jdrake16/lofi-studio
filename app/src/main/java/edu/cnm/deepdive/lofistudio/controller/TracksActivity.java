@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.lofistudio.controller;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,17 +9,29 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import edu.cnm.deepdive.lofistudio.R;
+import java.util.List;
 
 public class TracksActivity extends AppCompatActivity {
 
+
   private boolean playing = false;
 
-//  ListView listView;
-//
-//  public TracksActivity() {
-//    ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<>(toString(), android.R.layout.simple_list_item_1, );
-//    listView = findViewById(R.id.samples);
-//  }
+
+  ListView listView;
+  ArrayAdapter<String> arrayAdapter;
+
+  public TracksActivity(List<String> sample) {
+    assert toString(sample) != null;
+
+    arrayAdapter = new ArrayAdapter<String>(toString(sample),
+        android.R.layout.simple_list_item_1,
+        sample);
+    listView = findViewById(R.id.samples);
+  }
+
+  private Context toString(List<String> sample) {
+    return (Context) sample;
+  }
 
 
   @Override
@@ -38,10 +51,10 @@ public class TracksActivity extends AppCompatActivity {
 
   @Override
   public boolean onPrepareOptionsMenu(Menu menu) {
-     super.onPrepareOptionsMenu(menu);
-     menu.findItem(R.id.play).setVisible(!playing);
-     menu.findItem(R.id.pause).setVisible(playing);
-     return true;
+    super.onPrepareOptionsMenu(menu);
+    menu.findItem(R.id.play).setVisible(!playing);
+    menu.findItem(R.id.pause).setVisible(playing);
+    return true;
   }
 
   @Override
@@ -63,8 +76,6 @@ public class TracksActivity extends AppCompatActivity {
     }
     return handled;
   }
-
-
 
 
 }

@@ -10,6 +10,7 @@ import edu.cnm.deepdive.lofistudio.model.dao.SongSampleDao;
 import edu.cnm.deepdive.lofistudio.model.entity.Playlist;
 import edu.cnm.deepdive.lofistudio.model.entity.Sample;
 import io.reactivex.Completable;
+import io.reactivex.Single;
 import io.reactivex.functions.Action;
 import io.reactivex.schedulers.Schedulers;
 import java.util.List;
@@ -35,15 +36,47 @@ public class PlaylistRepository {
     songSampleDao = database.getSongSampleDao();
   }
 
-  //  public LiveData<List< /* pojo would be here*/ >> getAll() {
-//    return SampleDao.selectAll();
-//
-//  }
-//
-//  public Single< /* pojo? */> get(long id) {
-//    return SampleDao.selectById(id)
+    public LiveData<List<Playlist>> selectAll() {
+    return playlistDao.selectAll();
+  }
+
+  public LiveData<List<Playlist>> getAll() {
+    return playlistDao.getAll();
+
+  }
+
+//  public Single<Playlist> get(long id) {
+//    return playlistDao.selectById(id)
 //        .subscribeOn(Schedulers.io());
 //  }
+
+  public Context getContext() {
+    return context;
+  }
+
+  public LofiStudioDatabase getDatabase() {
+    return database;
+  }
+
+  public SampleDao getSampleDao() {
+    return sampleDao;
+  }
+
+  public PlaylistDao getPlaylistDao() {
+    return playlistDao;
+  }
+
+  public SongPlaylistDao getSongPlaylistDao() {
+    return songPlaylistDao;
+  }
+
+  public SongSampleDao getSongSampleDao() {
+    return songSampleDao;
+  }
+
+  public SongDao getSongDao() {
+    return songDao;
+  }
 
   public Completable save(Playlist playlist) {
     if (playlist.getId() == 0) {
@@ -53,6 +86,8 @@ public class PlaylistRepository {
       return Completable.fromSingle(playlistDao.update(playlist))
           .subscribeOn(Schedulers.io());
     }
+
+
 
   }
 

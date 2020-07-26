@@ -1,16 +1,18 @@
 package edu.cnm.deepdive.lofistudio.service;
 
 import android.content.Context;
+import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.lofistudio.model.dao.PlaylistDao;
 import edu.cnm.deepdive.lofistudio.model.dao.SampleDao;
 import edu.cnm.deepdive.lofistudio.model.dao.SongDao;
 import edu.cnm.deepdive.lofistudio.model.dao.SongPlaylistDao;
 import edu.cnm.deepdive.lofistudio.model.dao.SongSampleDao;
-import edu.cnm.deepdive.lofistudio.model.entity.Sample;
 import edu.cnm.deepdive.lofistudio.model.entity.Song;
 import io.reactivex.Completable;
+import io.reactivex.Single;
 import io.reactivex.functions.Action;
 import io.reactivex.schedulers.Schedulers;
+import java.util.List;
 
 public class SongRepository {
 
@@ -34,13 +36,18 @@ public class SongRepository {
 
   }
 
-//  public LiveData<List< /* pojo would be here*/ >> getAll() {
-//    return SampleDao.selectAll();
-//
-//  }
-//
-//  public Single< /* pojo? */> get(long id) {
-//    return SampleDao.selectById(id)
+  public Single<List<Song>> selectAll() {
+    return songDao.selectAll();
+  }
+
+  public LiveData<List<Song>> getAll() {
+    return songDao.getAll();
+
+  }
+
+
+//  public Single<Song> get(long id) {
+//    return SongDao.selectById(id)
 //        .subscribeOn(Schedulers.io());
 //  }
 

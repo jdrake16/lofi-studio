@@ -32,7 +32,6 @@ public interface SongPlaylistDao {
   @Delete
   Single<Integer> delete(SongPlaylist... songPlaylists);
 
-  @Transaction
   @Query("SELECT * FROM SongPlaylist ORDER BY song_playlist_id")
   Single<List<SongPlaylist>> selectAll();
 

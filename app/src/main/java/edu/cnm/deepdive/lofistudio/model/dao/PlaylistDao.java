@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.lofistudio.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -32,9 +33,15 @@ public interface PlaylistDao {
   @Delete
   Single<Integer> delete(Playlist... playlists);
 
-  @Transaction
   @Query("SELECT * FROM Playlist ORDER BY name")
-  Single<List<Playlist>> selectAll();
+  LiveData<List<Playlist>> selectAll();
+
+  @Query("SELECT * FROM Playlist ORDER BY name")
+  LiveData<List<Playlist>> getAll();
+
+  @Query("SELECT * FROM Playlist WHERE playlist_id = :playlistId")
+  Single<Song> selectById(long playlistId);
+
 
 
 

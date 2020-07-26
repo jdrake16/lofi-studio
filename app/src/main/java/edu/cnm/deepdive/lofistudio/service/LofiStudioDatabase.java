@@ -78,8 +78,6 @@ public abstract class LofiStudioDatabase extends RoomDatabase {
     public void onCreate(@NonNull SupportSQLiteDatabase db) {
       super.onCreate(db);
       try {
-        // TODO read sample LIST from raw resource; (find way to) save mp3 resources to files?
-        // TODO add sample instances to database
         List<Sample> samples = parseFile(R.raw.lofi_samples_twenty);
         LofiStudioDatabase.getInstance().getSampleDao().insert(samples)
             .subscribeOn(Schedulers.io())
