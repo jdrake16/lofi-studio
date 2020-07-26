@@ -33,7 +33,7 @@ public interface SampleDao {
   Single<Integer> delete(Sample... samples);
 
   @Query("SELECT * FROM Sample ORDER BY name")
-  Single<List<Sample>> selectAll();
+  LiveData<List<Sample>> selectAll();
 
-  LiveData<List<Sample>> getAll();
+
 }

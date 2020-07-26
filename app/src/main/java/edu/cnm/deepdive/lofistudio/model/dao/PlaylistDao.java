@@ -40,7 +40,7 @@ public interface PlaylistDao {
   LiveData<List<Playlist>> getAll();
 
   @Query("SELECT * FROM Playlist WHERE playlist_id = :playlistId")
-  Single<Song> selectById(long playlistId);
+  Single<Playlist> selectById(long playlistId);
 
 
 

@@ -38,12 +38,10 @@ public class SampleRepository {
 
   }
 
-  public Single<List<Sample>> selectAll() {
-    return sampleDao.selectAll();
-  }
+
 
   public LiveData<List<Sample>> getAll() {
-    return sampleDao.getAll();
+    return sampleDao.selectAll();
 
   }
 
