@@ -4,6 +4,7 @@
 
 _lofi Studio_ 1.0 is an intuitive beat-maker for those who enjoy the calming sounds of lofi, and for those who have yet to discover it. 
 
+
 ## Design Documentation
 
 ### [User Stories](user-stories.md) 
@@ -33,3 +34,7 @@ _lofi Studio_ 1.0 is an intuitive beat-maker for those who enjoy the calming sou
 ## DDL
 
 ### [Data Definition Language](ddl.md)
+
+## License Information
+
+see [Notice](notice.md)
