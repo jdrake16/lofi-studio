@@ -45,10 +45,9 @@ public class TracksActivity extends AppCompatActivity {
         ViewGroup track = findViewById(layoutId);
         track.removeAllViews();
         for (int j = 0; j < trackSamples[i].length; j++) {
-          // TODO inflate item_track_slot layout and set its background color and sample name according to trackSample[i][j]
-          track.addView(View.inflate(this, R.layout.item_track_slot, samples));
-          track.setBackgroundColor(R.layout.item_track_slot);
-          track.setId(layoutId);
+          // TODO inflate item_track_slot layout and set its background
+          //  color and sample name according to trackSample[i][j]
+          track.addView(View.inflate(this, R.layout.item_track_slot, track));
 
 
         }
