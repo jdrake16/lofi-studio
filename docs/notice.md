@@ -1,6 +1,6 @@
 ## License Information
 
-_lofi Studio_ written by Nick Bennett, with Jason Drake.
+_lofi Studio 1.0_ written by Nick Bennett, with Jason Drake.
 
 Copyright 2020 Deep Dive Coding/CNM Ingenuity, Inc.
 
