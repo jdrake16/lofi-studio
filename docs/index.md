@@ -22,21 +22,23 @@ looped, and recorded/exported. The user will also be able to create playlists ma
 
 ## Design Documentation
 
+### [Technical Requirements/Dependencies](technical-requirements.md)
+
+### [Current State](current-state.md)
+
 ### [User Stories](user-stories.md) 
 
 ### [App Instructions](Functionality.md) 
 
-### [Current State](current-state.md)
+### [Model/Service](implementation.md)
 
-### [Technical Requirements/Dependencies](technical-requirements.md)
+### [Data Definition Language](ddl.md)
 
 ### [Wireframe diagram](wireframe.md)
 
 ### [ERD](erd.md)
 
-### [Data Definition Language](ddl.md)
-
-### [Implementation](implementation.md)
+### [Build](build.md)
 
 ## License Information
 
