@@ -6,7 +6,7 @@ _lofi Studio_ 1.0 is a sample based beat-maker that uses a sequencer to create l
 This app is for those who enjoy the calming sounds of lofi, and for those who have yet to discover it. 
 
 
- The inspiration for this app comes from my love of music production and lofi music. 
+ The inspiration for this app comes from a love of music production and lofi music. 
 Lofi is generally associated with relaxation as well as simplicity, and this app was created with
 that in mind. It can take years to learn how to properly use a Digital Audio Workstation (which is 
 the tool for creating/arranging most music these days). Lofi Studio is a DAW in its simplest form 
@@ -26,11 +26,9 @@ looped, and recorded/exported. The user will also be able to create playlists ma
 
 ### [App Instructions](Functionality.md) 
 
-### [Persistent Data](persistent-data.md) 
+### [Current State](current-state.md)
 
-### [Device/external services](device-external-services.md) 
- 
-### [Stretch goals/possible enhancements](stretch-goals.md) 
+### [Technical Requirements/Dependencies](technical-requirements.md)
 
 ### [Wireframe diagram](wireframe.md)
 
