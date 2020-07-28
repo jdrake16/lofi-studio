@@ -1,6 +1,7 @@
 package edu.cnm.deepdive.lofistudio.controller;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,8 +47,14 @@ public class TracksActivity extends AppCompatActivity {
         track.removeAllViews();
         for (int j = 0; j < trackSamples[i].length; j++) {
           // TODO inflate item_track_slot layout and set its background
-          //  color and sample name according to trackSample[i][j]
-          track.addView(View.inflate(this, R.layout.item_track_slot, track));
+          //  color and sample name according to trackSamples[i][j]
+
+//          if (track.getParent() != null) {
+//            ((ViewGroup)track.getParent()).removeView(track);
+//          }
+//          track.addView(View.inflate(this, R.layout.item_track_slot, track));
+
+
 
 
         }
