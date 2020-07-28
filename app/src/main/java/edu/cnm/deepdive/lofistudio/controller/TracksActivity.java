@@ -53,8 +53,7 @@ public class TracksActivity extends AppCompatActivity {
 //            ((ViewGroup)track.getParent()).removeView(track);
 //          }
 //          track.addView(View.inflate(this, R.layout.item_track_slot, track));
-
-
+//
 
 
         }
