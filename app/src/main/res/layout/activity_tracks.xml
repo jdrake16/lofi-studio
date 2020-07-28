@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-
 <androidx.constraintlayout.widget.ConstraintLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,55 +18,19 @@
     app:layout_constraintVertical_weight="1"/>
 
 
-
-  <HorizontalScrollView
+  <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/tracks"
     android:layout_width="0dp"
     android:layout_height="0dp"
+    android:orientation="vertical"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    app:spanCount="4"
+    app:layout_constraintTop_toBottomOf="@id/samples"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintBottom_toTopOf="@id/track_length_barrier"
-    app:layout_constraintTop_toBottomOf="@id/samples"
-    app:layout_constraintVertical_weight="2">
+    app:layout_constraintVertical_weight="2"/>
 
-    <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:gravity="start">
-      <LinearLayout
-        android:id="@+id/track_1"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1"/>
-      <LinearLayout
-        android:id="@+id/track_2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1"/>
-      <LinearLayout
-        android:id="@+id/track_3"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1"/>
-      <LinearLayout
-        android:id="@+id/track_4"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1"/>
-
-    </LinearLayout>
-
-
-
-
-
-
-  </HorizontalScrollView>
 
   <TextView
     android:id="@+id/track_length_label"
@@ -86,6 +47,9 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:max="8"
+    android:min="2"
+    android:progress="4"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toEndOf="@id/track_length_label"
     app:layout_constraintEnd_toEndOf="parent"/>

@@ -8,11 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import edu.cnm.deepdive.lofistudio.R;
 import edu.cnm.deepdive.lofistudio.model.entity.Sample;
+import edu.cnm.deepdive.lofistudio.view.TracksAdapter;
 import edu.cnm.deepdive.lofistudio.viewmodel.MainViewModel;
 
 public class TracksActivity extends AppCompatActivity {
@@ -22,7 +27,8 @@ public class TracksActivity extends AppCompatActivity {
   private boolean playing = false;
   private ListView samples;
   private MainViewModel viewModel;
-
+  private SeekBar trackLength;
+  private RecyclerView tracks;
 
 
   @Override
@@ -31,6 +37,26 @@ public class TracksActivity extends AppCompatActivity {
     setContentView(R.layout.activity_tracks);
 
     samples = findViewById(R.id.samples);
+    trackLength = findViewById(R.id.track_length);
+    trackLength.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+      @Override
+      public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        if (fromUser) {
+          viewModel.resizeTracks(MainViewModel.NUM_TRACKS, progress);
+        }
+      }
+
+      @Override
+      public void onStartTrackingTouch(SeekBar seekBar) {
+
+      }
+
+      @Override
+      public void onStopTrackingTouch(SeekBar seekBar) {
+
+      }
+    });
+    tracks = findViewById(R.id.tracks);
     viewModel = new ViewModelProvider(this).get(MainViewModel.class);
     viewModel.getSamples().observe(this, (samples) -> {
       ArrayAdapter<Sample> adapter =
@@ -39,25 +65,13 @@ public class TracksActivity extends AppCompatActivity {
     });
 
     viewModel.getTrackSamples().observe(this, (trackSamples) -> {
-
-      for (int i = 0; i < trackSamples.length; i++) {
-        String trackId = "track_" + (i + 1);
-        int layoutId = getResources().getIdentifier(trackId, "id", getPackageName());
-        ViewGroup track = findViewById(layoutId);
-        track.removeAllViews();
-        for (int j = 0; j < trackSamples[i].length; j++) {
-          // TODO inflate item_track_slot layout and set its background
-          //  color and sample name according to trackSamples[i][j]
-
-//          if (track.getParent() != null) {
-//            ((ViewGroup)track.getParent()).removeView(track);
-//          }
-//          track.addView(View.inflate(this, R.layout.item_track_slot, track));
-//
+      TracksAdapter adapter = new TracksAdapter(this, trackSamples,
+          (GridLayoutManager) tracks.getLayoutManager());
+      tracks.setAdapter(adapter);
 
 
-        }
-      }
+
+
     });
   }
 
