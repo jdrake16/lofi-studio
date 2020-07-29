@@ -5,54 +5,41 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:id="@+id/layout"
-
   android:background="@drawable/gradient_list"
   android:orientation="vertical"
   android:gravity="center"
-  tools:context=".controller.MainActivity"
-  >
-
-
+  tools:context=".controller.MainActivity">
 
 
   <Button
     android:id="@+id/butt1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Create"
+    android:text="@string/create"
     android:textColor="@android:color/white"
     android:background="@android:color/transparent"
     android:textSize="50sp"
-    android:padding="40dp"
-
-
-    />
+    android:padding="40dp"/>
 
   <Button
     android:id="@+id/butt2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Listen"
+    android:text="@string/listen"
     android:textColor="@android:color/white"
     android:textSize="50sp"
     android:padding="40dp"
-    android:background="@android:color/transparent"
-
-    />
+    android:background="@android:color/transparent"/>
 
   <Button
     android:id="@+id/butt3"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Mix"
+    android:text="@string/mix"
     android:textColor="@android:color/white"
     android:textSize="50sp"
     android:padding="40dp"
-    android:background="@android:color/transparent"
-
-    />
-
-
+    android:background="@android:color/transparent"/>
 
 
 </LinearLayout>
