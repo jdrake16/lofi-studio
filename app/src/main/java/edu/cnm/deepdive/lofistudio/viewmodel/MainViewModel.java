@@ -8,9 +8,7 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.OnLifecycleEvent;
-import edu.cnm.deepdive.lofistudio.model.entity.Playlist;
 import edu.cnm.deepdive.lofistudio.model.entity.Sample;
-import edu.cnm.deepdive.lofistudio.model.entity.Song;
 import edu.cnm.deepdive.lofistudio.service.PlaylistRepository;
 import edu.cnm.deepdive.lofistudio.service.SampleRepository;
 import edu.cnm.deepdive.lofistudio.service.SongRepository;
@@ -23,7 +21,6 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
 
   public static final int NUM_TRACKS = 4;
   public static final int INITIAL_SLOTS = 4;
-
   private final SampleRepository sampleRepository;
   private final SongRepository songRepository;
   private final PlaylistRepository playlistRepository;
@@ -54,7 +51,6 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
   }
 
   public LiveData<Sample[][]> getTrackSamples() {
-
     return trackSamples;
   }
 
@@ -84,54 +80,7 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     Sample[][] oldSamples = trackSamples.getValue();
     Sample[][] newSamples = new Sample[oldSamples.length][oldSamples[0].length];
     trackSamples.setValue(newSamples);
-
   }
-  //  public LiveData<List<Playlist>> getPlaylist() {
-//    return playlistRepository.getAll();
-//  }
-//
-//  public LiveData<Song> getSong() {
-//    return songRepository.getAll();
-//  }
-
-//  public LiveData<Throwable> getThrowable() {
-//    return throwable;
-//  }
-
-//  public void setQuoteId(long id) {
-//    throwable.setValue(null);
-//    pending.add(
-//        quoteRepository.get(id)
-//            .subscribe(
-//                (quote) -> this.quote.postValue(quote),
-//                (throwable) -> this.throwable.postValue(throwable)
-//            )
-//    );
-//  }
-
-//  public void saveQuote(Quote quote) {
-//    throwable.setValue(null);
-//    pending.add(
-//        quoteRepository.save(quote)
-//            .subscribe(
-//                () -> {
-//                },
-//                (throwable) -> this.throwable.postValue(throwable)
-//            )
-//    );
-//  }
-//
-//  public void deleteQuote(Quote quote) {
-//    throwable.setValue(null);
-//    pending.add(
-//        quoteRepository.delete(quote)
-//            .subscribe(
-//                () -> {
-//                },
-//                (throwable) -> this.throwable.postValue(throwable)
-//            )
-//    );
-//  }
 
   @OnLifecycleEvent(Event.ON_STOP)
   private void clearPending() {

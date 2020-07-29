@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 import edu.cnm.deepdive.lofistudio.R;
 import edu.cnm.deepdive.lofistudio.model.entity.Sample;
 import edu.cnm.deepdive.lofistudio.view.TracksAdapter.Holder;

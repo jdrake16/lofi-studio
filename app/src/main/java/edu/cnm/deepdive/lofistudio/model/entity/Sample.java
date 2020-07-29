@@ -8,6 +8,9 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+/**
+ * The type Sample.
+ */
 @Entity(
     indices = @Index(value = "name", unique = true)
 )
@@ -26,34 +29,74 @@ public class Sample {
   private int length;
 
 
+  /**
+   * Gets id.
+   *
+   * @return the id
+   */
   public long getId() {
     return id;
   }
 
+  /**
+   * Sets id.
+   *
+   * @param id the id
+   */
   public void setId(long id) {
     this.id = id;
   }
 
+  /**
+   * Gets name.
+   *
+   * @return the name
+   */
   public String getName() {
     return name;
   }
 
+  /**
+   * Sets name.
+   *
+   * @param name the name
+   */
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Gets content.
+   *
+   * @return the content
+   */
   public String getContent() {
     return content;
   }
 
+  /**
+   * Sets content.
+   *
+   * @param content the content
+   */
   public void setContent(String content) {
     this.content = content;
   }
 
+  /**
+   * Gets length.
+   *
+   * @return the length
+   */
   public int getLength() {
     return length;
   }
 
+  /**
+   * Sets length.
+   *
+   * @param length the length
+   */
   public void setLength(int length) {
     this.length = length;
   }

@@ -6,6 +6,9 @@ import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+/**
+ * The type Song playlist.
+ */
 @Entity(
     indices = {
         @Index(value = {"playlist_id", "sequence"}),
@@ -34,34 +37,74 @@ public class SongPlaylist {
   @ColumnInfo(name = "sequence")
   private int sequence;
 
+  /**
+   * Gets id.
+   *
+   * @return the id
+   */
   public long getId() {
     return id;
   }
 
+  /**
+   * Sets id.
+   *
+   * @param id the id
+   */
   public void setId(long id) {
     this.id = id;
   }
 
+  /**
+   * Gets song id.
+   *
+   * @return the song id
+   */
   public long getSongId() {
     return songId;
   }
 
+  /**
+   * Sets song id.
+   *
+   * @param songId the song id
+   */
   public void setSongId(long songId) {
     this.songId = songId;
   }
 
+  /**
+   * Gets playlist id.
+   *
+   * @return the playlist id
+   */
   public long getPlaylistId() {
     return playlistId;
   }
 
+  /**
+   * Sets playlist id.
+   *
+   * @param playlistId the playlist id
+   */
   public void setPlaylistId(long playlistId) {
     this.playlistId = playlistId;
   }
 
+  /**
+   * Gets sequence.
+   *
+   * @return the sequence
+   */
   public int getSequence() {
     return sequence;
   }
 
+  /**
+   * Sets sequence.
+   *
+   * @param sequence the sequence
+   */
   public void setSequence(int sequence) {
     this.sequence = sequence;
   }

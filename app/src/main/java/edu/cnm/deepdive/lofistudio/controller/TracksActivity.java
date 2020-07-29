@@ -1,11 +1,8 @@
 package edu.cnm.deepdive.lofistudio.controller;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -21,8 +18,6 @@ import edu.cnm.deepdive.lofistudio.view.TracksAdapter;
 import edu.cnm.deepdive.lofistudio.viewmodel.MainViewModel;
 
 public class TracksActivity extends AppCompatActivity {
-
-
 
   private boolean playing = false;
   private ListView samples;
@@ -48,13 +43,12 @@ public class TracksActivity extends AppCompatActivity {
 
       @Override
       public void onStartTrackingTouch(SeekBar seekBar) {
-
       }
 
       @Override
       public void onStopTrackingTouch(SeekBar seekBar) {
-
       }
+
     });
     tracks = findViewById(R.id.tracks);
     viewModel = new ViewModelProvider(this).get(MainViewModel.class);
@@ -68,11 +62,8 @@ public class TracksActivity extends AppCompatActivity {
       TracksAdapter adapter = new TracksAdapter(this, trackSamples,
           (GridLayoutManager) tracks.getLayoutManager());
       tracks.setAdapter(adapter);
-
-
-
-
     });
+
   }
 
   @Override
