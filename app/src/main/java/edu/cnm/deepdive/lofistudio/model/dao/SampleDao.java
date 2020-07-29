@@ -10,6 +10,7 @@ import androidx.room.Transaction;
 import androidx.room.Update;
 import edu.cnm.deepdive.lofistudio.model.entity.Sample;
 import edu.cnm.deepdive.lofistudio.model.entity.Song;
+import io.reactivex.Maybe;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -35,5 +36,13 @@ public interface SampleDao {
   @Query("SELECT * FROM Sample ORDER BY name")
   LiveData<List<Sample>> selectAll();
 
+
+  @Query("SELECT * FROM Sample WHERE sample_id = :sampleId")
+  Single<Sample> selectById(long sampleId);
+
+  // TODO add getAll in sample repository
+
+  @Query("SELECT * FROM Sample WHERE name = :name")
+  Maybe<Sample> selectByName(String name);
 
 }

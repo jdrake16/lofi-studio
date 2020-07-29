@@ -11,8 +11,7 @@ import androidx.room.PrimaryKey;
  */
 @Entity(
     indices = {
-        @Index(value = {"song_id", "sequence"}),
-        @Index(value = {"sample_id", "sequence", "repetitions"})
+        @Index(value = {"sample_id", "track", "slot"})
     },
     foreignKeys = {
         @ForeignKey(entity = Song.class,
@@ -33,11 +32,9 @@ public class SongSample {
   @ColumnInfo(name = "sample_id", index = true)
   private long sampleId;
 
-  @ColumnInfo(name = "sequence")
-  private int sequence;
+  private int track;
 
-  @ColumnInfo(name = "repetitions")
-  private int repetitions;
+  private int slot;
 
 //  @ColumnInfo(name = "overlap")
 //  private int overlap;
@@ -101,17 +98,17 @@ public class SongSample {
    *
    * @return the sequence
    */
-  public int getSequence() {
-    return sequence;
+  public int getTrack() {
+    return track;
   }
 
   /**
    * Sets sequence.
    *
-   * @param sequence the sequence
+   * @param track the sequence
    */
-  public void setSequence(int sequence) {
-    this.sequence = sequence;
+  public void setTrack(int track) {
+    this.track = track;
   }
 
   /**
@@ -119,17 +116,17 @@ public class SongSample {
    *
    * @return the repetitions
    */
-  public int getRepetitions() {
-    return repetitions;
+  public int getSlot() {
+    return slot;
   }
 
   /**
    * Sets repetitions.
    *
-   * @param repetitions the repetitions
+   * @param slot the repetitions
    */
-  public void setRepetitions(int repetitions) {
-    this.repetitions = repetitions;
+  public void setSlot(int slot) {
+    this.slot = slot;
   }
 
 //  public int getOverlap() {

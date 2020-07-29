@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "7d7d03cef1f34bfc0ee7646d28bfe32e",
+    "identityHash": "c2b5a1504200895f36298506bdaf6398",
     "entities": [
       {
         "tableName": "Song",
@@ -219,7 +219,7 @@
       },
       {
         "tableName": "SongSample",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`song_sample_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `song_id` INTEGER NOT NULL, `sample_id` INTEGER NOT NULL, `sequence` INTEGER NOT NULL, `repetitions` INTEGER NOT NULL, `overlap` INTEGER NOT NULL, FOREIGN KEY(`song_id`) REFERENCES `Song`(`song_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`sample_id`) REFERENCES `Sample`(`sample_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`song_sample_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `song_id` INTEGER NOT NULL, `sample_id` INTEGER NOT NULL, `track` INTEGER NOT NULL, `slot` INTEGER NOT NULL, FOREIGN KEY(`song_id`) REFERENCES `Song`(`song_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`sample_id`) REFERENCES `Sample`(`sample_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -240,20 +240,14 @@
             "notNull": true
           },
           {
-            "fieldPath": "sequence",
-            "columnName": "sequence",
+            "fieldPath": "track",
+            "columnName": "track",
             "affinity": "INTEGER",
             "notNull": true
           },
           {
-            "fieldPath": "repetitions",
-            "columnName": "repetitions",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "overlap",
-            "columnName": "overlap",
+            "fieldPath": "slot",
+            "columnName": "slot",
             "affinity": "INTEGER",
             "notNull": true
           }
@@ -266,24 +260,14 @@
         },
         "indices": [
           {
-            "name": "index_SongSample_song_id_sequence",
-            "unique": false,
-            "columnNames": [
-              "song_id",
-              "sequence"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_SongSample_song_id_sequence` ON `${TABLE_NAME}` (`song_id`, `sequence`)"
-          },
-          {
-            "name": "index_SongSample_sample_id_sequence_repetitions_overlap",
+            "name": "index_SongSample_sample_id_track_slot",
             "unique": false,
             "columnNames": [
               "sample_id",
-              "sequence",
-              "repetitions",
-              "overlap"
+              "track",
+              "slot"
             ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_SongSample_sample_id_sequence_repetitions_overlap` ON `${TABLE_NAME}` (`sample_id`, `sequence`, `repetitions`, `overlap`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_SongSample_sample_id_track_slot` ON `${TABLE_NAME}` (`sample_id`, `track`, `slot`)"
           },
           {
             "name": "index_SongSample_song_id",
@@ -331,7 +315,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7d7d03cef1f34bfc0ee7646d28bfe32e')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c2b5a1504200895f36298506bdaf6398')"
     ]
   }
 }

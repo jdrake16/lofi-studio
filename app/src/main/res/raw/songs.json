@@ -1,0 +1,43 @@
+[
+  {
+    "name": "test song",
+    "samples": [
+      {
+        "name": "BB2_75_drum_loop_skatepark_drop",
+        "track": 1,
+        "slot": 1
+      },
+      {
+        "name": "BB2_75_drum_loop_skatepark_drop",
+        "track": 1,
+        "slot": 2
+      },
+      {
+        "name": "BB2_75_drum_loop_skatepark_drop",
+        "track": 1,
+        "slot": 3
+      },
+      {
+        "name": "BB2_75_drum_loop_skatepark_drop",
+        "track": 1,
+        "slot": 4
+      },
+      {
+        "name": "BB2_75_lofi_melodic_ascending_Em",
+        "track": 2,
+        "slot": 1
+      },
+      {
+        "name": "BB2_75_lofi_melodic_ascending_Em",
+        "track": 2,
+        "slot": 2
+      },
+      {
+        "name": "BBL_75_lofi_keys_street_creeper_Em",
+        "track": 3,
+        "slot": 2
+      }
+
+    ]
+  }
+]
