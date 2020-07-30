@@ -87,4 +87,6 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     pending.clear();
   }
 
+  // TODO get samples from spinner, populate.
+
 }
