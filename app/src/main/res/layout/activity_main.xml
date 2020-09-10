@@ -8,7 +8,7 @@
   android:background="@drawable/gradient_list"
   android:orientation="vertical"
   android:gravity="center"
-  tools:context=".controller.MainActivity">
+  tools:context=".MainActivity">
 
 
   <Button

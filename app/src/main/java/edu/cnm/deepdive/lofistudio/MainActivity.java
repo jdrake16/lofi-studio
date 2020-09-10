@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.lofistudio.controller;
+package edu.cnm.deepdive.lofistudio;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -8,7 +8,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import edu.cnm.deepdive.lofistudio.R;
+import edu.cnm.deepdive.lofistudio.controller.Activity2;
+import edu.cnm.deepdive.lofistudio.controller.Activity3;
+import edu.cnm.deepdive.lofistudio.controller.BoardActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         butt2.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent int2 = new Intent(MainActivity.this,Activity2.class);
+                Intent int2 = new Intent(MainActivity.this, Activity2.class);
                 startActivity(int2);
             }
         });
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         butt3.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent int3 = new Intent(MainActivity.this,Activity3.class);
+                Intent int3 = new Intent(MainActivity.this, Activity3.class);
                 startActivity(int3);
             }
         });
